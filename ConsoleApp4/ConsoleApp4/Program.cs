@@ -10,7 +10,7 @@ namespace ConsoleApp4
             CustomerGenerator customerGenerator = new CustomerGenerator();
             CustomerExternalWriter externalWriter = new CustomerExternalWriter();
 
-            var Clients = customerGenerator.GetCustomersList(Consts.RandomCustomers);
+            var Clients = customerGenerator.GetCustomersList(customersNumber: Consts.RandomCustomersNumber);
             externalWriter.WriteCustomers(Clients);
         }
     }

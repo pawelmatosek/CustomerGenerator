@@ -6,36 +6,36 @@ namespace ConsoleApp4
 {
     public class Randomizer
     {
-        Customer customer;
-        Random random;
-        StringBuilder builder;
+        private Customer _customer;
+        private Random _rd;
+        private StringBuilder _sb;
 
         public Randomizer()
         {
-            random = new Random();
-            builder = new StringBuilder();
+            _rd = new Random();
+            _sb = new StringBuilder();
         }
 
         public Customer GetRandomCustomer()
         {
-            customer = new Customer
+            _customer = new Customer
             {
                 SurName = GetRandomString(),
                 Name = GetRandomString(),
                 Age = GetRandomAge(),
                 Address = GetRandomString()
             };
-            return customer;
+            return _customer;
         }
 
         public string GetRandomString()
         {
             for(int i = 0; i < GetRandomLength(); i++)
-                builder.Append(GetRandomChar());
-            return builder.ToString();
+                _sb.Append(GetRandomChar());
+            return _sb.ToString();
         }
 
-        private int GetNext(int max, int min = Consts.MinimalRandomNumber) => random.Next(min, max);
+        private int GetNext(int max, int min = Consts.MinimalRandomNumber) => _rd.Next(min, max);
 
         private int GetRandomAge() => GetNext(max: Consts.MaxHumanAge);
 

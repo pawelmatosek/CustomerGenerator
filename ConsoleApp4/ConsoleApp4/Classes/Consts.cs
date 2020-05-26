@@ -25,7 +25,7 @@
         /// <summary>
         /// Number of customers that will be generated
         /// </summary>
-        public static int RandomCustomers = 10;
+        public static int RandomCustomersNumber = 10;
 
         /// <summary>
         /// Minimal value that we will randomize from

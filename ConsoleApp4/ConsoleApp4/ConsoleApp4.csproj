@@ -43,11 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Class1.cs" />
+    <Compile Include="Classes\CustomersData.cs" />
     <Compile Include="Classes\CustomerWriter.cs" />
     <Compile Include="Classes\CustomerGenerator.cs" />
     <Compile Include="Classes\Customer.cs" />
     <Compile Include="Interfaces\IGetCustomersList.cs" />
+    <Compile Include="Interfaces\IWriteCustomers.cs" />
     <Compile Include="Randomizer.cs" />
     <Compile Include="Classes\Consts.cs" />
     <Compile Include="Program.cs" />
